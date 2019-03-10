@@ -22,4 +22,15 @@ public class FileToArray {
         linesArr = lines.toArray(linesArr);
         return linesArr;
     }
+
+
+    public static char[][] readFileToCharArray(String file) {
+        String[] lines = readFile(file);
+        char[][] charArray = new char[lines.length][];
+        int index = 0;
+        for (String line:lines) {
+            charArray[index++] = line.toCharArray();
+        }
+        return charArray;
+    }
 }
